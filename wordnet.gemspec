@@ -19,9 +19,9 @@ Gem::Specification.new do |s|
 
 	s.add_dependency 'sequel',      '>= 3.38'
 	s.add_dependency 'loggability', '>= 0.5'
-	s.add_dependency 'sqlite3',     '>= 1.3', :developer
-	s.add_dependency 'rspec',       '~> 2.7', :developer
-	s.add_dependency 'simplecov',   '~> 0.6', :developer
+	s.add_dependency 'sqlite3',     '>= 1.3'
+	s.add_dependency 'rspec',       '~> 2.7'
+	s.add_dependency 'simplecov',   '~> 0.6'
 
 =begin
 	s.spec_extras[:licenses] = ["BSD"]
