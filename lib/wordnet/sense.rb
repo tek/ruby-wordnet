@@ -27,7 +27,7 @@ class WordNet::Sense < WordNet::Model( :senses )
 		self.log.debug "Generating a %p method for %p links" % [ type, typekey ]
 
 		method_body = Proc.new do
-			linkinfo = WordNet::Synset.linktype_names[ typekey ] or
+			linkinfo = WordNet::Synset.linktypes[ typekey ] or
 				raise ScriptError, "no such link type %p" % [ typekey ]
 			ssids = self.lexlinks_dataset.filter( :linkid => linkinfo[:id] ).select( :synset2id )
 			self.class.filter( :synsetid => ssids )
